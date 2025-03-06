@@ -1,0 +1,234 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9; /* Light gray background */
+  color: #333; /* Dark gray text */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px; /* Fixed typo (12000px -> 1200px) */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #2c3e50; /* Dark blue for headings */
+}
+
+a {
+  color: #3498db; /* Blue for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header Section */
+header {
+  background: #2c3e50; /* Dark blue */
+  color: white;
+  text-align: center;
+  padding: 60px 0; /* Reduced padding for mobile */
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.profile-img {
+  border-radius: 50%; /* Changed to 50% for perfect circle */
+  width: 150px; /* Reduced size for mobile */
+  height: 150px; /* Reduced size for mobile */
+  border: 5px solid white;
+  margin-bottom: 15px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+header h1 {
+  font-size: 2rem; /* Reduced font size for mobile */
+  margin: 10px 0;
+  animation: fadeInDown 1.5s ease;
+}
+
+header p {
+  font-size: 1rem; /* Reduced font size for mobile */
+  animation: fadeInUp 1.5s ease;
+}
+
+/* Sections */
+.section {
+  padding: 40px 0; /* Reduced padding for mobile */
+  background: white;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 20px; /* Reduced margin for mobile */
+  font-size: 1.75rem; /* Reduced font size for mobile */
+  color: #2c3e50; /* Dark blue for section headings */
+}
+
+/* Skills Section */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skills-list li {
+  background: #3d4d57; /* Blue */
+  color: white;
+  padding: 10px 20px; /* Reduced padding for mobile */
+  margin: 10px;
+  border-radius: 20px;
+  font-size: 0.9rem; /* Reduced font size for mobile */
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.skills-list li:hover {
+  transform: translateY(-5px);
+  background: #185774; /* Darker blue on hover */
+}
+
+/* Contact Section */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.contact-list li {
+  margin: 10px 0; /* Reduced margin for mobile */
+  font-size: 1rem; /* Reduced font size for mobile */
+  transition: transform 0.3s ease;
+}
+
+.contact-list li:hover {
+  transform: translateX(10px);
+}
+
+.contact-list i {
+  margin-right: 10px;
+  color: #3498db; /* Blue for icons */
+}
+
+/* Footer */
+footer {
+  background: #2c3e50; /* Dark blue */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Effects */
+.section:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    padding: 40px 0; /* Further reduced padding for smaller screens */
+  }
+
+  .profile-img {
+    width: 120px; /* Smaller image for mobile */
+    height: 120px; /* Smaller image for mobile */
+  }
+
+  header h1 {
+    font-size: 1.75rem; /* Smaller font size for mobile */
+  }
+
+  header p {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+  }
+
+  .section {
+    padding: 30px 0; /* Reduced padding for smaller screens */
+  }
+
+  .section h2 {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .skills-list li {
+    padding: 8px 15px; /* Reduced padding for mobile */
+    font-size: 0.8rem; /* Smaller font size for mobile */
+  }
+
+  .contact-list li {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-img {
+    width: 100px; /* Even smaller image for very small screens */
+    height: 100px; /* Even smaller image for very small screens */
+  }
+
+  header h1 {
+    font-size: 1.5rem; /* Smaller font size for very small screens */
+  }
+
+  header p {
+    font-size: 0.8rem; /* Smaller font size for very small screens */
+  }
+
+  .section h2 {
+    font-size: 1.25rem; /* Smaller font size for very small screens */
+  }
+
+  .skills-list li {
+    padding: 6px 10px; /* Further reduced padding for very small screens */
+    font-size: 0.75rem; /* Smaller font size for very small screens */
+  }
+
+  .contact-list li {
+    font-size: 0.8rem; /* Smaller font size for very small screens */
+  }
+}
